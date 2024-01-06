@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&family=Poppins&family=Quicksand:wght@300&family=Ubuntu&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Ubuntu', sans-serif;
+    overflow-x: hidden;
+}
+
+.navbar {
+ background:linear-gradient(rgb(30, 30, 62),rgb(14, 14, 75));
+  border-bottom: 1.2px solid blue;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #2700d4;
+}
+
+.menu-icon {
+    cursor: pointer;
+    display: none;
+}
+
+.bar {
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    margin: 6px 0;
+    transition: transform 0.3s ease;
+}
+
+#bar2 {
+    transform-origin: center;
+}
+
+.logo img {
+    width: 50px;
+    height: auto;
+}
+
+@media screen and (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+
+    .navbar-links {
+        display: none;
+        flex-direction: column;
+        align-items: self-start;
+        top: 0;
+        width: 80%;
+        height: 100vh;
+        position: absolute;
+        top: 88px;
+        left: 0;
+        background: linear-gradient(45deg, rgb(46, 62, 167),rgb(33, 30, 52));
+        padding: 20px;
+    }
+
+    .navbar a {
+        margin: 0;
+        top: 0;
+        border-bottom: 1px solid #555;
+        position: relative;
+        margin-top: 10px;
+    }
+
+    .menu-icon #bar1 {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .menu-icon #bar2 {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+
+    .navbar-links {
+        animation: slideInOut 0.5s forwards;
+    }
+
+    .menu-icon.clicked #bar1 {
+        transform: rotate(45deg) translate(-5px, 6px);
+    }
+
+    .menu-icon.clicked #bar2 {
+        transform: rotate(-45deg) translate(-5px, -6px);
+    }
+
+    .menu-icon.clicked + .navbar-links {
+        animation: slideOut 0.5s forwards;
+    }
+}
+
+@keyframes slideInOut {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideOut {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+.main-logo{
+    border-radius: 50%;
+    border: 1.2px solid orange;
+}
+
+/* <!-- ==================main-section=============== --> */
+
+.main{
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    background-image: url(Desktop\ -\ 1.png);
+}
+/* .plane{
+    width: 212.766px;
+height: 914.384px;
+transform: rotate(37.456deg);
+flex-shrink: 0;
+
+} */
+/* .plane{
+    fill: #0008ff;
+filter: blur(225px);
+} */
+/* .plane{
+width: 200px;
+height: 500px;
+background-color: blue;
+transform: rotate(3737.456deg);
+
+}
+.plane1{
+    float: right;
+    top: 0;
+    width: 200px;
+height: 500px;
+background-color: blue;
+transform: rotate(3737.456deg);
+}
+.plane1{
+    fill: #2229DB;
+filter: blur(225px);
+}
+.shadow{
+    display: flex;
+    justify-content: space-between;
+} */
+
+.name{
+    padding-top: 150px;
+}
+.name-logo{
+    width: 200px;
+    padding-top: 150px;
+    border-radius: 50%;
+
+}
+.name-content {
+    margin-left: 120px;
+}
+.name span{
+    color: rgb(240, 103, 34);
+}
+
+@media (max-width:768px){
+    .name-content {
+        margin-left: 20px;
+    }
+    .name-logo{
+        display: none;
+    }
+}
+
+/* .typing-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: #3498db;
+} */
+
+.media-icon i{
+font-size: 30px;
+padding-right: 5px;
+padding-top: 20px;
+padding-bottom: 15px;
+margin-left: 15px;
+}
+.name-bold h1{
+    font-weight: 800;
+    font-family:Poppins;
+}
+.media-icon i:hover{
+   font-size: 32px;
+}
