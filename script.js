@@ -21,42 +21,73 @@ function toggleMenu() {
 
 
 
-// var roles = [
-//     "I am a Front End Developer",
-//     "I am a UI/UX Designer",
-//     "I am a Full Stack Developer",
-//     // Add more roles as needed
-// ];
+// ------------loader----------------   
 
-// var currentRoleIndex = 0;
-// var currentCharacterIndex = 0;
-// var typingSpeed = 100; // Adjust typing speed (lower value means faster)
+document.addEventListener('DOMContentLoaded', function() {
+    var typed = new Typed(".typing-text", {
+        strings: ["Frontend developer", "UI/UX designer"],
+        typeSpeed: 50,
+        backSpeed: 25,
+        backDelay: 500,
+        startDelay: 500,
+        loop: true,
+    });
+});
 
-// function typeNextCharacter() {
-//     var textElement = document.getElementById('typing');
-//     var currentRole = roles[currentRoleIndex];
-//     textElement.innerHTML = currentRole.substring(0, currentCharacterIndex);
+// <!-- --------------Skill Page------------ -->
 
-//     if (currentCharacterIndex < currentRole.length) {
-//         currentCharacterIndex++;
-//         setTimeout(typeNextCharacter, typingSpeed);
-//     } else {
-//         setTimeout(eraseText, 1500); // Wait for 1.5 seconds before erasing
-//     }
-// }
+$(document).ready(function () {
+    animateProgressBar('htmlProgressBar', 0, 70);
+    animateProgressBar('cssProgressBar', 0, 65);
+    animateProgressBar('jsProgressBar', 0, 60);
+    animateProgressBar('pythonProgressBar', 0, 70);
+    animateProgressBar('mysqlProgressBar', 0, 79);
+});
 
-// function eraseText() {
-//     var textElement = document.getElementById('typing');
-//     if (currentCharacterIndex > 0) {
-//         var currentRole = roles[currentRoleIndex];
-//         textElement.innerHTML = currentRole.substring(0, currentCharacterIndex - 1);
-//         currentCharacterIndex--;
-//         setTimeout(eraseText, typingSpeed / 2);
-//     } else {
-//         currentRoleIndex = (currentRoleIndex + 1) % roles.length;
-//         setTimeout(typeNextCharacter, typingSpeed); // Start typing the next role
-//     }
-// }
+function animateProgressBar(progressBarId, startWidth, endWidth) {
+    var progressBar = $('#' + progressBarId + ' .progress-bar');
+    progressBar.animate({
+        width: endWidth + '%'
+    }, 1500); // Adjust the duration as needed (in milliseconds)
+}
 
-// // Start the typing animation
-// setTimeout(typeNextCharacter, typingSpeed);
+// <!-- ============project================ -->
+$(document).ready(function () {
+    // Initial number of visible cards
+    var initialVisibleCards = 3;
+
+    // Select the card container and the "Show More" button
+    var cardContainer = $('#cardContainer');
+    var showMoreBtn = $('#showMoreBtn');
+
+    // Hide cards that are initially not visible
+    hideExtraCards(initialVisibleCards);
+
+    // Event listener for the "Show More" button
+    showMoreBtn.on('click', function () {
+        // Increase the number of visible cards
+        initialVisibleCards += 3;
+
+        // Show additional cards
+        hideExtraCards(initialVisibleCards);
+    });
+
+    // Function to hide extra cards based on the specified limit
+    function hideExtraCards(limit) {
+        var cards = cardContainer.children('.col-md-4');
+
+        // Loop through all cards and toggle visibility
+        cards.each(function (index) {
+            if (index < limit) {
+                $(this).show();
+            } else {
+                $(this).hide();
+            }
+        });
+
+        // Toggle the "Show More" button based on the remaining cards
+        showMoreBtn.toggle(limit < cards.length);
+    }
+});
+
+        // <!-- ================Contact Us=============== -->

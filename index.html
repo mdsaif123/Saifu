@@ -9,6 +9,12 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <title>Responsive Navbar</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -25,24 +31,29 @@
     </div>
     <div class="navbar-links">
         <a href="#"> <i class="fa-solid fa-house"></i> &nbsp; &nbsp;Home</a>
-        <a href="#"><i class="fa-regular fa-address-card"></i> &nbsp; &nbsp;About</a>
-        <a href="#"><i class="fa-solid fa-code"></i>  &nbsp; &nbsp;Skills</a>
-        <a href="#"><i class="fa-solid fa-server"></i>  &nbsp; &nbsp;Projects</a>
+        <a href="#About"><i class="fa-regular fa-address-card"></i> &nbsp; &nbsp;About</a>
+        <a href="#skill"><i class="fa-solid fa-code"></i>  &nbsp; &nbsp;Skills</a>
+        <a href="#Project"><i class="fa-solid fa-server"></i>  &nbsp; &nbsp;Projects</a>
         <a href="#"><i class="fa-solid fa-phone"></i>   &nbsp; &nbsp;Contact Us</a>
     </div>
 </div>
 <!-- ==================main-section=============== -->
 <div class="container-fluid main">
-    <div class="container">
+    <div class="container ">
         <div class="row name-content">
             <div class="col-md-7 text-white name">
                 <div class="name-bold">
-                    <h1>Hii,</h1>
+                    <h1>Hello,</h1>
                     <h1>I am <span>Md Saif</span></h1>
+                  
+                        <section class="home" id="home">
+                            <div id="particles-js"></div>
+                            <div class="content">
+                                <h1>I am a <span class="typing-text"></span></h1>
+                            </div>
+                        </section>
+                    
                 </div>
-               
-                <!-- <div class="typing-text" id="typing">a</div> -->
-                <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus nulla, accusamus at veritatis rem doloribus.</h5>
                 <div class="mt-4">
                     <a href="path/to/your/cv-file.pdf" download="Your_CV.pdf" class="btn btn-outline-primary mx-2">Download CV</a>
                     <a href=""><button class="btn btn-primary">View Project</button></a>
@@ -56,23 +67,237 @@
                     <a href=""><i class="fa-brands fa-instagram " style="color: rgb(210, 134, 67)"></i></a>
                     <a href=""><i class="fa-brands fa-youtube text-danger"></i></a>
                  </div>
+                
             </div>
-           
-           
-    
         </div>
+    </div>
+</div>
+<!-- --------------About Page------------ -->
+<div class="container-fluid" id="About">
+    <div class="text-center About-me mt-5">
+        <h2> <i class="fa-solid fa-user"></i> About <span>Me</span></h2>
+    </div>
+    <div class="container about-con ">
       
+       
+        <div class="row">
+            <div class="col-md-5">
+               <img src="logo.jpg" class=" img-fluid about-logo" alt="">
+            </div>
+            <div class="col-md-6 main-name">
+                <h1> <span>I'm</span> Md Saif </h1>
+                <h4>Front End Developer 
+                    And I am Pursuing Full Stack Developer</h4>
+                <h6>"I am a Frontend Developer who holds a Bachelor's degree in Computer Application from Tilak Maharashtra Vidyapeeth University in Pune. My short-term goal is to become a successful frontend developer, and I am actively seeking opportunities to contribute my best in this field. I am enthusiastic about leveraging my skills and knowledge to create impactful and innovative web solutions."</h6> <br>
+                <div class="address">
+                    <i class="fa-solid fa-envelope"></i> &nbsp; <span>Email :</span>mdsaif62041@gmail.com <br>
 
+                    <i class="fa-solid fa-phone"></i>  &nbsp; <span>Phone No :</span>Phone Nu : +91 6204180519 <br>
 
+                    <i class="fa-solid fa-location-dot"></i>  &nbsp;<span> Place : </span>Jijamata Nagar Worli, Mumbai
+
+                </div>
+                <div class="m-3">
+                    <a href="path/to/your/cv-file.pdf" download="Your_CV.pdf" <div class="button btn btn-outline-primary rounded-pill">Download Cv</div></a>
+                    
+                </div>
+               
+
+            
+                    
+
+            </div>
+        </div>
     </div>
 </div>
 
-  
-   
-   
+<!-- =================skills============= -->
+<div class="container-fluid skill-bg " id="skill">
+    <div class="text-center skill-header mt-5 p-5">
+        <h2><span><i class="fa-solid fa-code"></i></span>&nbsp; skills &  Abilities</h2>
+    </div>
+    
+    <div class="container skill-set">
+        
+        <div class="row bar-icon">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea, voluptas quidem sed maiores, repellendus libero unde nisi ducimus fugit placeat sequi! Dolor laudantium porro odio! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem asperiores tempora nesciunt labore ab sequi adipisci velit similique minima tempore!</p>
+            <div class="col-md-6">
+            
+                
+                <h4> <i class="fa-brands fa-html5"></i>  HTML</h4>
+                <div class="progress my-2  rounded-right" id="htmlProgressBar">
+                    <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            
+                <h4> 
+                    <i class="fa-brands fa-css3-alt"></i>  CSS</h4>
+                <div class="progress my-2 rounded-right" id="cssProgressBar">
+                    <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            
+                <h4> <i class="fa-brands fa-square-js"></i>  JavaScript</h4>
+                <div class="progress my-2 rounded-right" id="jsProgressBar">
+                    <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            
+                <h4> <i class="fa-brands fa-python"></i>  Python</h4>
+                <div class="progress my-2 rounded-right" id="pythonProgressBar">
+                    <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            
+                <h4> <i class="fa-solid fa-server"></i>  MySQL</h4>
+                <div class="progress my-2 rounded-right" id="mysqlProgressBar">
+                    <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+        
+            
+            
 
-
+            </div>
+            <div class="col-md-5 my-2">
+                <div class="row skill-img no-gutters">
+                    <div class="col-md-6 my-2 col-6">
+                        <img src="bootstrap.logo.png" alt="" class="img-fluid">
+                    </div>
+                    <div class="col-md-6 my-2 col-6">
+                        <img src="jquery-logo-png-16-16-512.png" alt="" class="img-fluid">
+                    </div>
+                    <div class="col-md-6 my-2 col-6">
+                        <img src="react-1-logo-png-transparent.png" alt="" class="img-fluid">
+                    </div>
+                    <div class="col-md-6 my-2 col-6">
+                        <img src="logo-javascript_2x_cpugmu.png" alt="" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
 </div>
+<!-- ============project================ -->
+<div class="text-center Project-header project1 mt-2 p-3">
+    <h2><i class="fa-solid fa-laptop-code"></i>&nbsp; Project  <span>Made</span></h2>
+</div>
+    <div class="container-fluid pt-4 " id="Project">
+        <div class="container ">
+            <div class="row " id="cardContainer">
+                <div class="col-md-4 col-sm-6 my-2">
+                    <div class="card glass-morphism" style="width: 18rem;">
+                        <img class="card-img-top" src="ntech.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Aspect</h5>
+                            <p class="card-text">This is the project based on our institute N tech Global Solution</p>
+                            <a href="#" class="btn btn-outline-primary mx-2">View Project</a>
+                            <a href="#" class="btn btn-primary">Source Code</a>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="col-md-4 col-sm-6 my-2">
+                    <div class="card glass-morphism" style="width: 18rem;">
+                        <img class="card-img-top img-fluid" src="ntech.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Aspect</h5>
+                            <p class="card-text">This is the project based on our institute N tech Global Solution</p>
+                            <a href="#" class="btn btn-outline-primary mx-2">View Project</a>
+                            <a href="#" class="btn btn-primary">Source Code</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 my-2">
+                    <div class="card glass-morphism" style="width: 18rem;">
+                        <img class="card-img-top img-fluid" src="ntech.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Aspect</h5>
+                            <p class="card-text">This is the project based on our institute N tech Global Solution</p>
+                            <a href="#" class="btn btn-outline-primary mx-2">View Project</a>
+                            <a href="#" class="btn btn-primary">Source Code</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 my-2">
+                    <div class="card glass-morphism" style="width: 18rem;">
+                        <img class="card-img-top" src="ntech.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Aspect</h5>
+                            <p class="card-text">This is the project based on our institute N tech Global Solution</p>
+                            <a href="#" class="btn btn-outline-primary mx-2">View Project</a>
+                            <a href="#" class="btn btn-primary">Source Code</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 my-2">
+                    <div class="card glass-morphism" style="width: 18rem;">
+                        <img class="card-img-top" src="ntech.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Aspect</h5>
+                            <p class="card-text">This is the project based on our institute N tech Global Solution</p>
+                            <a href="#" class="btn btn-outline-primary mx-2">View Project</a>
+                            <a href="#" class="btn btn-primary">Source Code</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 my-2">
+                    <div class="card glass-morphism" style="width: 18rem;">
+                        <img class="card-img-top" src="ntech.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Aspect</h5>
+                            <p class="card-text">This is the project based on our institute N tech Global Solution</p>
+                            <a href="#" class="btn btn-outline-primary mx-2">View Project</a>
+                            <a href="#" class="btn btn-primary">Source Code</a>
+                        </div>
+                    </div>
+                </div>
+            
+            </div>
+            </div>
+            <div class="text-center p-3">
+                <button id="showMoreBtn" class="btn btn-outline-primary rounded-pill">Show More &nbsp; <i class="fas fa-arrow-right"></i></button>
+            </div>
+        </div>
+
+        <!-- ================Contact Us=============== -->
+       
+        <div class="container-fluid p-4 " id="contact">
+            <div class="text-center Project-header project1 mt-2 p-3">
+                <h2><i class="fa-solid fa-headset"></i>&nbsp; Get In <span>Touch</span></h2>
+            </div>
+            <div class="container bg-white contact-box">
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="contact-us.jpg" class="" alt="">
+
+                    </div>
+                    <div class="col-md-6 form-box">
+                        <form action="">
+                            <input type="text" class="form-control my-3" placeholder="Name">
+                            <input type="email" class="form-control my-3" placeholder="Email">
+                            <input type="text" class="form-control my-3" placeholder="Phone">
+                           <textarea name="" id="" cols="30" rows="5" class="form-control my-3" placeholder="Message"></textarea>
+                            <div class="text-center p-2">
+                                <div class="button btn btn-primary sub-btn">Submit  &nbsp;<i class="fa-brands fa-telegram"></i></div>
+                            </div>
+
+
+                        </form>
+                      
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+      
+  
+
+
+
+   
+   
+
+
+
 
 <script src="script.js"></script>
 </body>

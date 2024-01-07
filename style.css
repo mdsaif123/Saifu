@@ -5,7 +5,9 @@ body {
     padding: 0;
     font-family: 'Ubuntu', sans-serif;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
+
 
 .navbar {
  background:linear-gradient(rgb(30, 30, 62),rgb(14, 14, 75));
@@ -131,41 +133,11 @@ body {
     height: 100vh;
     background-color: black;
     background-image: url(Desktop\ -\ 1.png);
-}
-/* .plane{
-    width: 212.766px;
-height: 914.384px;
-transform: rotate(37.456deg);
-flex-shrink: 0;
-
-} */
-/* .plane{
-    fill: #0008ff;
-filter: blur(225px);
-} */
-/* .plane{
-width: 200px;
-height: 500px;
-background-color: blue;
-transform: rotate(3737.456deg);
+   /* position: fixed;
+ z-index: 100; */
 
 }
-.plane1{
-    float: right;
-    top: 0;
-    width: 200px;
-height: 500px;
-background-color: blue;
-transform: rotate(3737.456deg);
-}
-.plane1{
-    fill: #2229DB;
-filter: blur(225px);
-}
-.shadow{
-    display: flex;
-    justify-content: space-between;
-} */
+
 
 .name{
     padding-top: 150px;
@@ -190,13 +162,12 @@ filter: blur(225px);
     .name-logo{
         display: none;
     }
+    .main{
+        height: 70vh;
+    }
 }
 
-/* .typing-text {
-    font-size: 24px;
-    font-weight: bold;
-    color: #3498db;
-} */
+
 
 .media-icon i{
 font-size: 30px;
@@ -211,4 +182,168 @@ margin-left: 15px;
 }
 .media-icon i:hover{
    font-size: 32px;
+}
+
+/* <!-- --------------About Page------------ --> */
+
+.about-logo{
+    width: 400px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+   
+}
+.about-con{
+   margin-left: 155px;
+}
+
+@media (max-width:768px){
+    .about-con{
+        margin-left: 0px;
+     }
+}
+.About-me span{
+    color: rgb(255, 15, 15);
+    
+}
+.About-me{
+    margin-bottom: 45px;
+  
+}
+.About-me h2{
+    font-weight: bold;
+    border: orange;
+}
+.address span{
+    color: blue;
+}
+.fa-envelope{
+    color: red;
+}
+.fa-phone{
+    color: green;
+}
+.fa-location-dot{
+    color: orange;
+}
+.main-name span{
+color: rgb(223, 14, 14);
+}
+.main-name{
+    margin-top: 25px;
+}
+.name-bold h1{
+    font-weight: 700;
+}
+/* <!-- =================skills============= --> */
+.skill-bg{
+    background-color: #736dc39c;
+
+}
+.skill-header h2{
+    font-weight: 700;
+}
+.skill-header span{
+    color: rgb(228, 25, 25);
+}
+.skill-img img{
+   width: 150px;
+    border-radius: 15px;
+    /* border: 2px solid rgb(173, 166, 199); */
+    box-shadow: 0 0 5px rgba(85, 79, 79, 0.782); /* Adjust the values as needed */
+}
+.skill-img{
+    padding: 0 80px 0 80px;
+}
+.skill-set{
+    margin: 0 90px 0 90px;
+   
+}
+
+@media (max-width:768px){
+    .skill-img{
+        padding: 0 0px 0 0px;
+    }
+    .skill-set{
+        margin: 0 0px 0 0px;
+    }
+    /* .skill-row{
+        margin: 0 0px 0 0px;
+           } */
+}
+/* .skill-row{
+margin: 0 50px 0 50px;
+   } */
+.rounded-right {
+border-radius: 10px;
+    
+}
+.bar-icon .fa-html5{
+    color: red;
+
+}
+.fa-css3-alt{
+    color: blue;
+}
+.fa-square-js{
+    color: #F0DB4F;
+}
+.fa-python{
+    color: black;
+}
+.bar-icon .fa-server{
+    color: blue;
+}
+
+/* <!-- ============project================ --> */
+#Project  i{
+ color: blue;
+}
+
+.project1 span {
+    color: red;
+}
+.project1 h2{
+    font-weight: 700;
+}
+#Project{
+  /* background-image: url(Desktop\ -\ 1.png); */
+  background: linear-gradient(#A9A6DA,#cf9c55);
+}
+.glass-morphism {
+    background: rgba(255, 255, 255, 0.145);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+
+/* <!-- ================Contact Us=============== --> */
+#contact{
+    background-color: #b4c4e6;
+    height: 40vh;
+}
+form{
+    padding: 45px;
+}
+.contact-box{
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.517), 5px 5px 10px rgba(0, 0, 0, 0.342);
+margin-bottom: 10px;
+border-radius: 10px;
+}
+@media (max-width:768px){
+  .contact-box img{
+    display: none;
+
+  }
+  #contact{
+    background-color: #b4c4e6;
+    height: 30vh;
+}
+form{
+    padding: 5px;
+}
+.sub-btn{
+    width: 100%;
+}
 }
