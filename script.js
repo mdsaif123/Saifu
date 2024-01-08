@@ -91,3 +91,17 @@ $(document).ready(function () {
 });
 
         // <!-- ================Contact Us=============== -->
+        $(document).ready(function () {
+            $(window).scroll(function () {
+                // Get the scroll position
+                var scroll = $(window).scrollTop();
+                
+                // Update the top property of the navbar based on the scroll position
+                $('#navbar').css('top', scroll + 'px');
+        
+                // Update the height of the thin scrollbar based on the scroll position
+                $('.thin-scrollbar').css('height', (100 * scroll / ($(document).height() - $(window).height())) + '%');
+            });
+        });
+        
+        

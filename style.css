@@ -7,16 +7,85 @@ body {
     overflow-x: hidden;
     scroll-behavior: smooth;
 }
+::-webkit-scrollbar {
+   display: none;
+}
+/* For WebKit (Chrome, Safari)
+::-webkit-scrollbar {
+    width: 12px;
+}
 
+::-webkit-scrollbar-track {
+    background: #4112cd;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(blue,red,yellow,blue);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #560edb;
+} */
+
+/* For Firefox */
+html {
+    scrollbar-width: thin;
+    scrollbar-color: #cd1212 #f1f1f1;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    overflow-y: scroll;
+}
+
+/* ... (your existing styles) ... */
+
+/* Custom thin scrollbar for the navbar */
+.thin-scrollbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 8px; /* Adjust the width as needed */
+background: linear-gradient(blue,white,orange,rgb(252, 35, 35));
+    border-radius: 10px;
+    z-index: 1001; /* Make sure it's above the navbar */
+}
+
+.thin-scrollbar:hover {
+    background-color: #555;
+}
+@media(max-width:768px){
+    .thin-scrollbar{
+        display: none;
+    }
+    ::-webkit-scrollbar{
+        background-color: #2700d4;
+    }
+}
+
+
+
+/* Optional: You can add styling for the content inside the scrollbar */
+.custom-scrollbar {
+    padding: 20px;
+}
 
 .navbar {
- background:linear-gradient(rgb(30, 30, 62),rgb(14, 14, 75));
-  border-bottom: 1.2px solid blue;
+    background: linear-gradient(rgb(30, 30, 62), rgb(14, 14, 75));
+    border-bottom: 1.2px solid blue;
     padding: 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
+
+
 
 .navbar a {
     color: #fff;
@@ -316,12 +385,18 @@ border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     overflow: hidden;
 }
+@media (max-width:768px){
+.card{
+    width: 100%;
+}
+}
 
 
 /* <!-- ================Contact Us=============== --> */
 #contact{
     background-color: #b4c4e6;
-    height: 40vh;
+    /* height: 40vh; */
+
 }
 form{
     padding: 45px;
@@ -330,20 +405,117 @@ form{
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.517), 5px 5px 10px rgba(0, 0, 0, 0.342);
 margin-bottom: 10px;
 border-radius: 10px;
+margin-bottom: 50px;
+}
+
+.form-box input{
+    background-color: #E5ECFB;
+    border: 1px solid black;
+}
+.form-box input::placeholder{
+ color: black;
+}
+.form-box textarea::placeholder{
+    color: black;
+}
+.form-box textarea{
+    background-color: #E5ECFB;
+    border: 1px solid black;
+}
+.sub-btn {
+    /* Assuming .sub-btn is a class for styling the button */
+    box-shadow: 0 0 10px rgb(94, 85, 221); /* Set the box shadow color and size as needed */
 }
 @media (max-width:768px){
   .contact-box img{
     display: none;
 
   }
-  #contact{
-    background-color: #b4c4e6;
-    height: 30vh;
-}
+
 form{
     padding: 5px;
 }
 .sub-btn{
     width: 100%;
 }
+}
+
+/* ===========footer============== */
+
+.foot{
+    padding: 5px  50px 5px 50px;
+    font-family: Poppins;
+}
+.quick-link a{
+    text-decoration: none;
+    color: white;
+
+}
+.quick-link li{
+  list-style: none;
+  margin-top: 5px;
+}
+.quick-link span{
+   background-color: white;
+   border-radius: 50%;
+   color: black;
+  width: 20px;
+  height: 20px;
+  margin-top: 5px;
+  }
+.quick-link a:hover ,  span:hover{
+color: red;
+}
+.quick-link span{
+    font-size: 12px;
+}
+.contact i{
+    color: red;
+}
+.foot-dev{
+    color: red;
+    font-weight: 600;
+    padding: 10px;
+}
+.foot-icon a {
+    display: inline-block;
+    margin: 5px; /* Adjust the margin as needed */
+}
+
+.foot-icon i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 25px;
+}
+.foot-icon a {
+    text-decoration: none;
+}
+
+/* Add any additional styling for the icon colors */
+.text-white {
+    color: white;
+}
+
+.text-info {
+    color: blue;
+}
+
+/* You can add styles for other icon colors as needed */
+
+@media (max-width:768px){
+    .foot{
+        padding: unset;
+        
+    }
+    .foot-m{
+      margin-top: 15px;
+    }
+    .quick-red{
+        color: red;
+    }
 }
