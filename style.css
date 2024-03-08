@@ -7,15 +7,17 @@ body {
     overflow-x: hidden;
     scroll-behavior: smooth;
 }
-::-webkit-scrollbar {
+
+
+/* ::-webkit-scrollbar {
    display: none;
-}
-/* For WebKit (Chrome, Safari)
+} */
+For WebKit (Chrome, Safari)
 ::-webkit-scrollbar {
     width: 12px;
 }
 
-::-webkit-scrollbar-track {
+/* ::-webkit-scrollbar-track {
     background: #4112cd;
 }
 
@@ -308,6 +310,10 @@ color: rgb(223, 14, 14);
     background-color: #736dc39c;
 
 }
+
+#skill{
+    padding-bottom: 80px;
+}
 .skill-header h2{
     font-weight: 700;
 }
@@ -366,6 +372,10 @@ border-radius: 10px;
 /* <!-- ============project================ --> */
 #Project  i{
  color: blue;
+}
+#Project{
+    padding-bottom: 50px;
+
 }
 
 .project1 span {

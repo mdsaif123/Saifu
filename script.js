@@ -37,11 +37,11 @@ document.addEventListener('DOMContentLoaded', function() {
 // <!-- --------------Skill Page------------ -->
 
 $(document).ready(function () {
-    animateProgressBar('htmlProgressBar', 0, 70);
-    animateProgressBar('cssProgressBar', 0, 65);
+    animateProgressBar('htmlProgressBar', 0, 85);
+    animateProgressBar('cssProgressBar', 0, 70);
     animateProgressBar('jsProgressBar', 0, 60);
     animateProgressBar('pythonProgressBar', 0, 70);
-    animateProgressBar('mysqlProgressBar', 0, 79);
+    animateProgressBar('mysqlProgressBar', 0, 80);
 });
 
 function animateProgressBar(progressBarId, startWidth, endWidth) {
