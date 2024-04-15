@@ -103,5 +103,4 @@ $(document).ready(function () {
                 $('.thin-scrollbar').css('height', (100 * scroll / ($(document).height() - $(window).height())) + '%');
             });
         });
-        
-        
+  

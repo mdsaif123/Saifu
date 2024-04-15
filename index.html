@@ -31,14 +31,15 @@
         <div class="bar" id="bar3"></div>
     </div>
     <div class="logo">
-        <img src="p3.png" class="main-logo" alt="Logo">
+        <img src="p1.png" class="main-logo" alt="Logo">
+     
     </div>
     <div class="navbar-links">
         <a href="#"> <i class="fa-solid fa-house"></i> &nbsp; &nbsp;Home</a>
         <a href="#About"><i class="fa-regular fa-address-card"></i> &nbsp; &nbsp;About</a>
         <a href="#skill"><i class="fa-solid fa-code"></i>  &nbsp; &nbsp;Skills</a>
         <a href="#Project"><i class="fa-solid fa-server"></i>  &nbsp; &nbsp;Projects</a>
-        <a href="#"><i class="fa-solid fa-phone"></i>   &nbsp; &nbsp;Contact Us</a>
+        <a href="#contact" class="conatact-btn"><i class="fa-solid fa-phone"></i>   &nbsp; &nbsp;Contact Us</a>
     </div>
 </div>
 <!-- ==================main-section=============== -->
@@ -79,6 +80,10 @@
             </div>
         </div>
     </div>
+    <a href="https://api.whatsapp.com/send?phone=6204180519" target="_blank" class="whatsapp">
+        <i class="fa-brands fa-square-whatsapp"></i>
+    </a>
+    
 </div>
 <!-- --------------About Page------------ -->
 <div class="container-fluid" id="About">
@@ -121,6 +126,7 @@
 
 <!-- =================skills============= -->
 <div class="container-fluid skill-bg " id="skill"  data-aos="fade-up">
+    
     <div class="text-center skill-header mt-5 p-5">
         <h2><span><i class="fa-solid fa-code"></i></span>&nbsp; skills &  Abilities</h2>
     </div>
@@ -325,17 +331,17 @@
 
                     </div>
                     <div class="col-md-6 form-box" data-aos="fade-up">
-                        <form action="">
-                            <input type="text" class="form-control my-3" placeholder=" Name" data-aos="fade-up">
-                            <input type="email" class="form-control my-3" placeholder="Email" data-aos="fade-up">
-                            <input type="text" class="form-control my-3" placeholder="Phone" data-aos="fade-up">
-                           <textarea name="" id="" cols="30" rows="5" class="form-control my-3" placeholder="Message" data-aos="fade-up"></textarea>
+                        <form action="https://api.web3forms.com/submit" method="POST">
+                            <input type="hidden" name="access_key" value="14d8288e-fa09-4922-a5d3-92970358eb2a">
+                            <input type="text" name="name" class="form-control my-3" placeholder="Name" data-aos="fade-up" required>
+                            <input type="email" name="email" class="form-control my-3" placeholder="Email" data-aos="fade-up" required>
+                            <input type="tel" name="phone" class="form-control my-3" placeholder="Phone" data-aos="fade-up" required>
+                            <textarea name="message" cols="30" rows="5" class="form-control my-3" placeholder="Message" data-aos="fade-up" required></textarea>
                             <div class="text-center p-2">
-                                <div class="button btn btn-primary sub-btn" data-aos="fade-up">Submit  &nbsp;<i class="fa-brands fa-telegram"></i></div>
+                                <button type="submit" class="button btn btn-primary sub-btn" data-aos="fade-up">Submit <i class="fab fa-telegram"></i></button>
                             </div>
-
-
                         </form>
+                        
                       
 
                     </div>

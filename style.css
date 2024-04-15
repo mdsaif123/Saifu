@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&family=Poppins&family=Quicksand:wght@300&family=Ubuntu&display=swap');
 
 body {
@@ -12,10 +19,10 @@ body {
 /* ::-webkit-scrollbar {
    display: none;
 } */
-For WebKit (Chrome, Safari)
+/* For WebKit (Chrome, Safari)
 ::-webkit-scrollbar {
     width: 12px;
-}
+} */
 
 /* ::-webkit-scrollbar-track {
     background: #4112cd;
@@ -51,6 +58,8 @@ body {
     right: 0;
     height: 100%;
     width: 8px; /* Adjust the width as needed */
+background: -webkit-gradient(linear,left top, left bottom,from(blue),color-stop(white),color-stop(orange),to(rgb(252, 35, 35)));
+background: -o-linear-gradient(blue,white,orange,rgb(252, 35, 35));
 background: linear-gradient(blue,white,orange,rgb(252, 35, 35));
     border-radius: 10px;
     z-index: 1001; /* Make sure it's above the navbar */
@@ -76,12 +85,20 @@ background: linear-gradient(blue,white,orange,rgb(252, 35, 35));
 }
 
 .navbar {
+    background: -webkit-gradient(linear, left top, left bottom, from(rgb(30, 30, 62)), to(rgb(14, 14, 75)));
+    background: -o-linear-gradient(rgb(30, 30, 62), rgb(14, 14, 75));
     background: linear-gradient(rgb(30, 30, 62), rgb(14, 14, 75));
     border-bottom: 1.2px solid blue;
     padding: 15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -94,10 +111,15 @@ background: linear-gradient(blue,white,orange,rgb(252, 35, 35));
     text-decoration: none;
     padding: 10px;
     margin: 0 10px;
+    -webkit-transition: color 0.3s ease;
+    -o-transition: color 0.3s ease;
     transition: color 0.3s ease;
 }
 
 .navbar a:hover {
+    color: #2700d4;
+}
+.navbar .conatact-btn{
     color: #2700d4;
 }
 
@@ -111,11 +133,17 @@ background: linear-gradient(blue,white,orange,rgb(252, 35, 35));
     height: 3px;
     background-color: #fff;
     margin: 6px 0;
+    -webkit-transition: -webkit-transform 0.3s ease;
+    transition: -webkit-transform 0.3s ease;
+    -o-transition: transform 0.3s ease;
     transition: transform 0.3s ease;
+    transition: transform 0.3s ease, -webkit-transform 0.3s ease;
 }
 
 #bar2 {
-    transform-origin: center;
+    -webkit-transform-origin: center;
+        -ms-transform-origin: center;
+            transform-origin: center;
 }
 
 .logo img {
@@ -130,14 +158,20 @@ background: linear-gradient(blue,white,orange,rgb(252, 35, 35));
 
     .navbar-links {
         display: none;
-        flex-direction: column;
-        align-items: self-start;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: self-start;
+            -ms-flex-align: self-start;
+                align-items: self-start;
         top: 0;
         width: 80%;
         height: 100vh;
         position: absolute;
         top: 88px;
         left: 0;
+        background: -o-linear-gradient(45deg, rgb(46, 62, 167),rgb(33, 30, 52));
         background: linear-gradient(45deg, rgb(46, 62, 167),rgb(33, 30, 52));
         padding: 20px;
     }
@@ -151,50 +185,120 @@ background: linear-gradient(blue,white,orange,rgb(252, 35, 35));
     }
 
     .menu-icon #bar1 {
-        transform: rotate(-45deg) translate(-5px, 6px);
+        -webkit-transform: rotate(-45deg) translate(-5px, 6px);
+            -ms-transform: rotate(-45deg) translate(-5px, 6px);
+                transform: rotate(-45deg) translate(-5px, 6px);
     }
 
     .menu-icon #bar2 {
-        transform: rotate(45deg) translate(-5px, -6px);
+        -webkit-transform: rotate(45deg) translate(-5px, -6px);
+            -ms-transform: rotate(45deg) translate(-5px, -6px);
+                transform: rotate(45deg) translate(-5px, -6px);
     }
 
     .navbar-links {
-        animation: slideInOut 0.5s forwards;
+        -webkit-animation: slideInOut 0.5s forwards;
+                animation: slideInOut 0.5s forwards;
     }
 
     .menu-icon.clicked #bar1 {
-        transform: rotate(45deg) translate(-5px, 6px);
+        -webkit-transform: rotate(45deg) translate(-5px, 6px);
+            -ms-transform: rotate(45deg) translate(-5px, 6px);
+                transform: rotate(45deg) translate(-5px, 6px);
     }
 
     .menu-icon.clicked #bar2 {
-        transform: rotate(-45deg) translate(-5px, -6px);
+        -webkit-transform: rotate(-45deg) translate(-5px, -6px);
+            -ms-transform: rotate(-45deg) translate(-5px, -6px);
+                transform: rotate(-45deg) translate(-5px, -6px);
     }
 
     .menu-icon.clicked + .navbar-links {
-        animation: slideOut 0.5s forwards;
+        -webkit-animation: slideOut 0.5s forwards;
+                animation: slideOut 0.5s forwards;
+    }
+}
+
+@-webkit-keyframes slideInOut {
+    from {
+        -webkit-transform: translateX(-100%);
+                transform: translateX(-100%);
+    }
+    to {
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
     }
 }
 
 @keyframes slideInOut {
     from {
-        transform: translateX(-100%);
+        -webkit-transform: translateX(-100%);
+                transform: translateX(-100%);
     }
     to {
-        transform: translateX(0);
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
+    }
+}
+
+@-webkit-keyframes slideOut {
+    from {
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
+    }
+    to {
+        -webkit-transform: translateX(-100%);
+                transform: translateX(-100%);
     }
 }
 
 @keyframes slideOut {
     from {
-        transform: translateX(0);
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
     }
     to {
-        transform: translateX(-100%);
+        -webkit-transform: translateX(-100%);
+                transform: translateX(-100%);
     }
 }
 .main-logo{
     border-radius: 50%;
     border: 1.2px solid orange;
+}
+
+.whatsapp {
+    z-index: 1000;
+    padding: 10px;
+    border-radius: 30%;
+    position: fixed;
+    bottom: 20px; /* Adjust this value as needed */
+    right: 20px; /* Adjust this value as needed */
+     animation: whatsappAnimation 2s infinite;
+}
+@keyframes whatsappAnimation {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+.whatsapp i {
+    font-size: 50px;
+    color: green;
+   
+}
+.conatact-btn{
+    /* background-color: rgba(37, 65, 180, 0.796); */
+    border: 1px solid blue;
+    padding: 25px 35px;
+    /* margin: 15px; */
+  
+    border-radius: 10px;
+}
+
+
+.fa-phone{
+    color: rgb(42, 24, 125);
 }
 
 /* <!-- ==================main-section=============== --> */
@@ -303,7 +407,7 @@ margin-left: 15px;
     color: red;
 }
 .fa-phone{
-    color: green;
+    color: rgb(184, 110, 46);
 }
 .fa-location-dot{
     color: orange;
@@ -320,6 +424,7 @@ color: rgb(223, 14, 14);
 /* <!-- =================skills============= --> */
 .skill-bg{
     background-color: #736dc39c;
+    
 
 }
 
@@ -336,7 +441,8 @@ color: rgb(223, 14, 14);
    width: 150px;
     border-radius: 15px;
     /* border: 2px solid rgb(173, 166, 199); */
-    box-shadow: 0 0 5px rgba(85, 79, 79, 0.782); /* Adjust the values as needed */
+    -webkit-box-shadow: 0 0 5px rgba(85, 79, 79, 0.782);
+            box-shadow: 0 0 5px rgba(85, 79, 79, 0.782); /* Adjust the values as needed */
 }
 .skill-img{
     padding: 0 80px 0 80px;
@@ -398,13 +504,17 @@ border-radius: 10px;
 }
 #Project{
   /* background-image: url(Desktop\ -\ 1.png); */
+  background: -webkit-gradient(linear,left top, left bottom,from(#A9A6DA),to(#cf9c55));
+  background: -o-linear-gradient(#A9A6DA,#cf9c55);
   background: linear-gradient(#A9A6DA,#cf9c55);
 }
 .glass-morphism {
     background: rgba(255, 255, 255, 0.145);
-    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     overflow: hidden;
 }
 .disabled-link {
@@ -435,7 +545,8 @@ form{
     padding: 45px;
 }
 .contact-box{
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.517), 5px 5px 10px rgba(0, 0, 0, 0.342);
+    -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.517), 5px 5px 10px rgba(0, 0, 0, 0.342);
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.517), 5px 5px 10px rgba(0, 0, 0, 0.342);
 margin-bottom: 10px;
 border-radius: 10px;
 margin-bottom: 50px;
@@ -445,8 +556,32 @@ margin-bottom: 50px;
     background-color: #E5ECFB;
     border: 1px solid black;
 }
+.form-box input::-webkit-input-placeholder{
+ color: black;
+}
+.form-box input::-moz-placeholder{
+ color: black;
+}
+.form-box input:-ms-input-placeholder{
+ color: black;
+}
+.form-box input::-ms-input-placeholder{
+ color: black;
+}
 .form-box input::placeholder{
  color: black;
+}
+.form-box textarea::-webkit-input-placeholder{
+    color: black;
+}
+.form-box textarea::-moz-placeholder{
+    color: black;
+}
+.form-box textarea:-ms-input-placeholder{
+    color: black;
+}
+.form-box textarea::-ms-input-placeholder{
+    color: black;
 }
 .form-box textarea::placeholder{
     color: black;
@@ -457,7 +592,8 @@ margin-bottom: 50px;
 }
 .sub-btn {
     /* Assuming .sub-btn is a class for styling the button */
-    box-shadow: 0 0 10px rgb(94, 85, 221); /* Set the box shadow color and size as needed */
+    -webkit-box-shadow: 0 0 10px rgb(94, 85, 221);
+            box-shadow: 0 0 10px rgb(94, 85, 221); /* Set the box shadow color and size as needed */
 }
 @media (max-width:768px){
   .contact-box img{
@@ -516,9 +652,15 @@ color: red;
 }
 
 .foot-icon i {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     background-color: white;
     width: 40px;
     height: 40px;
