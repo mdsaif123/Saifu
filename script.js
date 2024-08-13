@@ -8,6 +8,7 @@ function toggleMenu() {
         navbarLinks.style.display = 'flex';
         bars[0].style.transform = 'rotate(-45deg) translate(-5px, 6px)';
         bars[1].style.transform = 'rotate(45deg) translate(-5px, -6px)';
+        
        
         isMenuOpen = true;
     } else {
@@ -103,4 +104,24 @@ $(document).ready(function () {
                 $('.thin-scrollbar').css('height', (100 * scroll / ($(document).height() - $(window).height())) + '%');
             });
         });
-  
+
+
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) { // Adjust scroll position as needed
+              navbar.classList.add('scrolled');
+            } else {
+              navbar.classList.remove('scrolled');
+            }
+          });
+
+
+          document.addEventListener("DOMContentLoaded", function() {
+            var loadingScreen = document.getElementById('loading');
+            loadingScreen.style.opacity = '0';
+            setTimeout(function() {
+                loadingScreen.style.display = 'none';
+            }, 1000); // Match this duration with the transition duration in CSS
+        });
+        
+        

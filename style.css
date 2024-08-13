@@ -83,12 +83,11 @@ background: linear-gradient(blue,white,orange,rgb(252, 35, 35));
 .custom-scrollbar {
     padding: 20px;
 }
-
 .navbar {
     background: -webkit-gradient(linear, left top, left bottom, from(rgb(30, 30, 62)), to(rgb(14, 14, 75)));
     background: -o-linear-gradient(rgb(30, 30, 62), rgb(14, 14, 75));
     background: linear-gradient(rgb(30, 30, 62), rgb(14, 14, 75));
-    border-bottom: 1.2px solid blue;
+    border-bottom: 1.2px solid rgb(252, 252, 253);
     padding: 15px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -102,8 +101,14 @@ background: linear-gradient(blue,white,orange,rgb(252, 35, 35));
     position: sticky;
     top: 0;
     z-index: 1000;
-}
-
+    transition: backdrop-filter 0.3s, background-color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Default shadow */
+  }
+  .navbar.scrolled {
+    backdrop-filter: blur(10px);
+    background: rgba(30, 30, 62, 0.5); /* Adjust opacity as needed */
+  }
+  
 
 
 .navbar a {
@@ -131,7 +136,8 @@ background: linear-gradient(blue,white,orange,rgb(252, 35, 35));
 .bar {
     width: 30px;
     height: 3px;
-    background-color: #fff;
+    background-color: #2810db;
+    border-radius: 50px;
     margin: 6px 0;
     -webkit-transition: -webkit-transform 0.3s ease;
     transition: -webkit-transform 0.3s ease;
@@ -147,15 +153,35 @@ background: linear-gradient(blue,white,orange,rgb(252, 35, 35));
 }
 
 .logo img {
-    width: 50px;
+    width: 60px;
     height: auto;
 }
+
 
 @media screen and (max-width: 768px) {
     .menu-icon {
         display: block;
     }
 
+    /* .navbar-links {
+        display: none;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: self-start;
+            -ms-flex-align: self-start;
+                align-items: self-start;
+       
+        width: 80%;
+        height: 100vh;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        background: -o-linear-gradient(45deg, rgb(46, 62, 167),rgb(33, 30, 52));
+        background: linear-gradient(45deg, rgb(46, 62, 167),rgb(33, 30, 52));
+        padding: 20px;
+    } */
     .navbar-links {
         display: none;
         -webkit-box-orient: vertical;
@@ -165,17 +191,20 @@ background: linear-gradient(blue,white,orange,rgb(252, 35, 35));
         -webkit-box-align: self-start;
             -ms-flex-align: self-start;
                 align-items: self-start;
-        top: 0;
         width: 80%;
         height: 100vh;
         position: absolute;
-        top: 88px;
+        top: 80px;
         left: 0;
-        background: -o-linear-gradient(45deg, rgb(46, 62, 167),rgb(33, 30, 52));
-        background: linear-gradient(45deg, rgb(46, 62, 167),rgb(33, 30, 52));
+        background: rgba(30, 30, 30, 0.5); /* Semi-transparent background */
+        backdrop-filter: blur(10px); /* Glassy effect */
         padding: 20px;
+        /* Optional: Add a border or shadow for better visibility */
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius:  0 10px 0  0;
     }
-
+    
     .navbar a {
         margin: 0;
         top: 0;
@@ -423,8 +452,11 @@ color: rgb(223, 14, 14);
 }
 /* <!-- =================skills============= --> */
 .skill-bg{
-    background-color: #736dc39c;
-    
+    background-image: url('bg.png');
+    /* You might want to add other properties to control the background display */
+    background-size: cover; /* Adjusts the background size to cover the entire element */
+    background-position: center; /* Centers the background image */
+    background-repeat: no-repeat; /* Prevents the background image from repeating */
 
 }
 
@@ -503,11 +535,19 @@ border-radius: 10px;
     font-weight: 700;
 }
 #Project{
-  /* background-image: url(Desktop\ -\ 1.png); */
-  background: -webkit-gradient(linear,left top, left bottom,from(#A9A6DA),to(#cf9c55));
+  /* background-image: url(wave-haikei.png); */
+  /* background: -webkit-gradient(linear,left top, left bottom,from(#A9A6DA),to(#cf9c55));
   background: -o-linear-gradient(#A9A6DA,#cf9c55);
-  background: linear-gradient(#A9A6DA,#cf9c55);
+  background: linear-gradient(#A9A6DA,#cf9c55); */
 }
+#Project {
+    background-image: url('mesh-527.png');
+    /* You might want to add other properties to control the background display */
+    background-size: cover; /* Adjusts the background size to cover the entire element */
+    background-position: center; /* Centers the background image */
+    background-repeat: no-repeat; /* Prevents the background image from repeating */
+  }
+  
 .glass-morphism {
     background: rgba(255, 255, 255, 0.145);
     -webkit-backdrop-filter: blur(10px);
@@ -693,4 +733,31 @@ color: red;
     .quick-red{
         color: red;
     }
+}
+
+/* ===== Loader ===== */
+#loading {
+    position: fixed;
+    width: 100%;
+    /* height: 100vh; */
+    background: #fff url(loader.gif) no-repeat center;
+    z-index: 99;
+    -webkit-transition: 1s;
+    -o-transition: 1s;
+    transition: 1s;
+}
+
+/* ==================download cv button============ */
+
+.download-cv{
+    padding: 5 15px;
+
+}
+.social-links {
+   padding: 15px 50px 15px 25px;
+    font-size: 20px;
+}
+.social-links a{
+    padding-right: 5px;
+    font-size: 20px;
 }
