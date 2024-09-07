@@ -1,25 +1,30 @@
-let isMenuOpen = false;
-
-function toggleMenu() {
-    const navbarLinks = document.querySelector('.navbar-links');
-    const bars = document.querySelectorAll('.bar');
-
-    if (!isMenuOpen) {
-        navbarLinks.style.display = 'flex';
-        bars[0].style.transform = 'rotate(-45deg) translate(-5px, 6px)';
-        bars[1].style.transform = 'rotate(45deg) translate(-5px, -6px)';
-        
-       
-        isMenuOpen = true;
-    } else {
-        navbarLinks.style.display = 'none';
-        bars[0].style.transform = 'none';
-        bars[1].style.transform = 'none';
-       
-        isMenuOpen = false;
+//navbar js
+const body = document.querySelector("body"),
+nav = document.querySelector("nav"),
+modeToggle = document.querySelector(".dark-light"),
+searchToggle = document.querySelector(".searchToggle"),
+sidebarOpen = document.querySelector(".sidebarOpen"),
+siderbarClose = document.querySelector(".siderbarClose");
+let getMode = localStorage.getItem("mode");
+    if(getMode && getMode === "dark-mode"){
+      body.classList.add("dark");
     }
-}
+// js code to toggle search box
+  searchToggle.addEventListener("click" , () =>{
+  searchToggle.classList.toggle("active");
+});
 
+
+//   js code to toggle sidebar
+sidebarOpen.addEventListener("click" , () =>{
+nav.classList.add("active");
+});
+body.addEventListener("click" , e =>{
+let clickedElm = e.target;
+if(!clickedElm.classList.contains("sidebarOpen") && !clickedElm.classList.contains("menu")){
+  nav.classList.remove("active");
+}
+});
 
 
 // ------------loader----------------   
@@ -123,5 +128,18 @@ $(document).ready(function () {
                 loadingScreen.style.display = 'none';
             }, 1000); // Match this duration with the transition duration in CSS
         });
+        
+
+
+
+
+
+
+
+
+
+
+
+
         
         
