@@ -134,10 +134,32 @@ $(document).ready(function () {
 
 
 
-
-
-
-
+        function animateText() {
+            const typingText = document.querySelector('.typing-text');
+            const words = typingText.textContent.split(' '); // Split words
+            typingText.textContent = ''; // Clear initial content
+      
+            words.forEach((word, index) => {
+                // Create a span for each word
+                const span = document.createElement('span');
+                span.textContent = word + ' '; // Add space after each word
+                typingText.appendChild(span); // Append span to typing text
+      
+                // Animate using GSAP
+                gsap.from(span, {
+                    duration: 0.5,
+                    y: 50, // Start from below
+                    opacity: 0,
+                    delay: index * 0.5, // Delay for stagger effect
+                    ease: "power2.out"
+                });
+            });
+        }
+      
+        // Run the animation after the window has loaded
+        window.onload = () => {
+            animateText();
+        };
 
 
 
